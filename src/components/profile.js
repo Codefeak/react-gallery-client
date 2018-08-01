@@ -5,11 +5,11 @@ import RightPannel from './RightPannel';
 
 const Profile = (props)=>{
     console.log(props.location);
-    const username = props.location.state.some.username.toUpperCase();
+    // const username = props.location.state.some.username.toUpperCase();
     return(
         <div>
             <h1>Profile Page</h1>
-            <h2>Welcome Back {username}</h2>
+            <h2>Welcome Back</h2>
             <div className="main-container">
                 <div className="left-container">
                     <LeftPannel data="" classShow=""/>

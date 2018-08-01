@@ -16,7 +16,7 @@ class Login extends Component{
         console.log(this.state);
         axios({
             method:'post',
-            url:'/login',
+            url:'https://react-gallery-server.herokuapp.com/login',
             data: this.state
         }).then(res=>{
             if(!res.data.error){

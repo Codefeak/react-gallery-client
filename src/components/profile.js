@@ -6,12 +6,20 @@ import RightPannel from './RightPannel';
 class Profile extends Component{
 
     componentDidMount=()=>{
-        fetch('https://react-gallery-server.herokuapp.com/api')
-        .then(res=>res.json())
-        .then(api=>{
-            api.forEach(student=>{
-                console.log(student)
-            })
+        // fetch('https://react-gallery-server.herokuapp.com/api')
+        // .then(res=>res.json())
+        // .then(api=>{
+        //     api.forEach(student=>{
+        //         console.log(student)
+        //     })
+        // })
+        axios({
+            method:'post',
+            url:'https://react-gallery-server.herokuapp.com/api',
+        }).then(res=>{
+            if(!res.data.error){
+                console.log(res)
+            }
         })
     }
 

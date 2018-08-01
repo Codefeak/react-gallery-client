@@ -1,42 +1,35 @@
 import React, { Component } from 'react';
 import LeftPannel from './LeftPannel';
-import axios from 'axios';
 import MidPannel from './MidPannel';
 import RightPannel from './RightPannel';
 
 class Profile extends Component{
-
-    componentDidMount=()=>{
-        // fetch('https://react-gallery-server.herokuapp.com/api')
-        // .then(res=>res.json())
-        // .then(api=>{
-        //     api.forEach(student=>{
-        //         console.log(student)
-        //     })
-        // })
-        axios({
-            method:'post',
-            url:'https://react-gallery-server.herokuapp.com/api',
-        }).then(res=>{
-            if(!res.data.error){
-                console.log(res)
-            }
-        })
+    state={
+        students:[],
     }
+    componentDidMount=()=>{
+        fetch('https://react-gallery-server.herokuapp.com/api')
+        .then(res=>res.json())
+        .then(api=>{
+            this.setState({students:api});
+            console.log(this.state);
+        })
+    };
+
 
     render(){
         return(
             <div>
                 <div className="main-container">
                     <div className="left-container">
-                        <LeftPannel data="" classShow=""/>
+                        <LeftPannel data={this.state.students}/>
                     </div>
-                    {/* <div className="right-container">
-                        <RightPannel data="" classShow=""/>
+                    <div className="right-container">
+                        <RightPannel data={this.state.students}/>
                     </div>
                     <div className="mid-container">
-                        <MidPannel data="" click=""/>
-                    </div> */}
+                        <MidPannel data={this.state.students}/>
+                    </div>
                 </div>
             </div>
         )

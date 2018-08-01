@@ -20,7 +20,6 @@ class Login extends Component{
             data: this.state
         }).then(res=>{
             if(!res.data.error){
-                console.log(res);
             }
             this.props.history.push('/login/profile', {some:res.data})
         });

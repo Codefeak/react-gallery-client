@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LeftPannel from './LeftPannel';
+import axios from 'axios';
 import MidPannel from './MidPannel';
 import RightPannel from './RightPannel';
 

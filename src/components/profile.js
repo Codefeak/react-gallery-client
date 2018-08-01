@@ -4,6 +4,12 @@ import MidPannel from './MidPannel';
 import RightPannel from './RightPannel';
 
 const Profile = (props)=>{
+
+    componentDidMount=()=>{
+        fetch('https://react-gallery-server.herokuapp.com/api')
+        .then(res=> console.log(res))
+    }
+
     console.log(props.location);
     // const username = props.location.state.some.username.toUpperCase();
     return(

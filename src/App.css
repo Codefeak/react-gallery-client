@@ -136,6 +136,7 @@ body{
   height:2vw;
   background:transparent;
   font-size: 0.75em;
+  cursor: pointer;
 }
 
 .info-div{

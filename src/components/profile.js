@@ -25,9 +25,13 @@ class Profile extends Component{
     }
 
     handleClick=(e)=>{
-        const tmp = this.filter(this.state.students, e.target.alt);
-        console.log("tmp", tmp);
-        this.setState({individualData:tmp, classShow:'hide'});
+        if(e.target.id==="back" ){
+            this.setState({individualData:this.state.students, classShow:'show'});
+            e.target.className=this.state.classShow;
+        }else{
+            const tmp = this.filter(this.state.students, e.target.alt);
+            this.setState({individualData:tmp, classShow:'hide'});
+        }
     }
 
     render(){
@@ -38,7 +42,7 @@ class Profile extends Component{
                         <LeftPannel data={this.state.individualData} classShow = {this.state.classShow}/>
                     </div>
                     <div className="right-container">
-                        <RightPannel data={this.state.individualData} classShow = {this.state.classShow}/>
+                        <RightPannel data={this.state.individualData} classShow = {this.state.classShow} click={this.handleClick}/>
                     </div>
                     <div className="mid-container">
                         <MidPannel data={this.state.students} click={this.handleClick} />

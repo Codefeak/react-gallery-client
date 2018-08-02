@@ -40,11 +40,26 @@ body{
 
 .right-container>div{
   height: inherit;
+  display:grid;
+  align-items: center;
 }
 
-.info>h1{
-  text-align: center;
+
+.info .right-headers{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
 }
+
+.info .right-headers>h1{
+  padding:0.1vw 1vw;
+}
+
+#partners, #api{
+  
+  border-right:3px solid
+}
+
 .img-logos>img{
   width:5vw;
   margin:0.5vw;
@@ -112,6 +127,15 @@ body{
 .indiv-information{
   height: inherit;
   text-align:center;
+}
+
+.indiv-information input{
+  float:right;
+  border-radius:50%;
+  width:2vw;
+  height:2vw;
+  background:transparent;
+  font-size: 0.75em;
 }
 
 .info-div{

@@ -10,7 +10,11 @@ const RightPannel=(props)=>{
 		return(
 			<div>
 				<div className={`info ${props.classShow}`}>
-					<h1>Partners</h1>
+					<div className="right-headers">
+						<h1 id="partners">Partners</h1>
+						<h1 id="api">API</h1>
+						<h1 id="add-new">AddNew</h1>
+					</div>
 					<div className="img-logos">
 						<img src={digia} alt="Digia Logo"/>
 						<img src={druid} alt="Druid Logo"/>
@@ -22,8 +26,9 @@ const RightPannel=(props)=>{
 				</div>
 				
 
-				<div className={`indiv-information ${props.classShow==="show"?"hide":"show"} `}> 
-					<div className = "info-div">	
+				<div className={`indiv-information ${props.classShow==="show"?"hide":"show"}`}>
+					<input className={`indiv-information ${props.classShow==="show"?"hide":"show"}`} type="button" value="X" id="back" onClick={props.click}/> 
+					<div className = "info-div ">	
 						<h2 className="key-name">Name: </h2><p>{props.data[0] && `${props.data[0].firstName} ${props.data[0].lastName}`}</p>
 						<h2 className="key-name">Title: </h2><p>{props.data[0] && `${props.data[0].title}`}</p>
 						<h2 className="key-name">Nationality: </h2><p>{props.data[0] && `${props.data[0].nationality}`}</p>

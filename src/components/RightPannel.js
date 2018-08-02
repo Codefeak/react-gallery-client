@@ -17,7 +17,7 @@ class RightPannel extends Component{
 				<div className={`info ${this.props.classShow}`}>
 					<div className="right-headers">
 						<h1 id="partners">Partners</h1>
-						<h1 id="api"><a href="'https://react-gallery-server.herokuapp.com/api">API</a></h1>
+						<h1 id="api"><a href="https://react-gallery-server.herokuapp.com/api">API</a></h1>
 						<h1 id="add-new">AddNew</h1>
 					</div>
 					<div className="img-logos">

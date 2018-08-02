@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-import { withRouter } from 'react-router';
+import { withRouter, Redirect } from 'react-router';
 import digia from './images/digia-logo.svg';
 import druid from './images/druid-logo.svg';
 import fraktio from './images/fraktio-logo-white.svg';
@@ -10,18 +10,14 @@ import helsinki from './images/Helsinki-logo-2017.png';
 
 class RightPannel extends Component{
 
-		Click=(e)=>{
-			e.preventDefault;
-			this.props.history.replace('https://react-gallery-server.herokuapp.com/api')
-		}
-		
+
 		render(){
 		return(
 			<div>
 				<div className={`info ${this.props.classShow}`}>
 					<div className="right-headers">
 						<h1 id="partners">Partners</h1>
-						<h1 id="api"><a onClick={this.Click}>API</a></h1>
+						<h1 id="api"><a href="'https://react-gallery-server.herokuapp.com/api">API</a></h1>
 						<h1 id="add-new">AddNew</h1>
 					</div>
 					<div className="img-logos">

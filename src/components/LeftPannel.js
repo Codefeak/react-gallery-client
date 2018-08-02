@@ -10,7 +10,7 @@ const LeftPannel=(props)=>{
 					<img src={logo} alt="Integrify Logo"/>
 					<p>Welcome to Integrify Gallery</p>
 				</div>
-				<div className = "indiv-image hide">
+				<div className = "indiv-image">
 					<img src={props.data[0] && require(`./images/${toCapitalize(props.data[0].src)}`)} 
 						alt={props.data[0] && props.data[0].alt} 
 					 />

@@ -22,7 +22,7 @@ const RightPannel=(props)=>{
 				</div>
 				
 
-				<div className={`indiv-information ${props.classShow==="show"?"hide":"show"} hide`}> 
+				<div className={`indiv-information ${props.classShow==="show"?"hide":"show"} `}> 
 					<div className = "info-div">	
 						<h2 className="key-name">Name: </h2><p>{props.data[0] && `${props.data[0].firstName} ${props.data[0].lastName}`}</p>
 						<h2 className="key-name">Title: </h2><p>{props.data[0] && `${props.data[0].title}`}</p>

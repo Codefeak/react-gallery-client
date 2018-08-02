@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-import { withRouter, Redirect } from 'react-router';
+import { withRouter, Redirect, Link } from 'react-router-dom';
 import digia from './images/digia-logo.svg';
 import druid from './images/druid-logo.svg';
 import fraktio from './images/fraktio-logo-white.svg';
@@ -18,7 +18,7 @@ class RightPannel extends Component{
 					<div className="right-headers">
 						<h1 id="partners">Partners</h1>
 						<h1 id="api"><a href="https://react-gallery-server.herokuapp.com/api">API</a></h1>
-						<h1 id="add-new">AddNew</h1>
+						<h1 id="add-new"><Link to="/login/addNew">AddNew</Link></h1>
 					</div>
 					<div className="img-logos">
 						<img src={digia} alt="Digia Logo"/>

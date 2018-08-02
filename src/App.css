@@ -158,3 +158,47 @@ body{
   color:white;
 }
 
+.form-container{
+  width:70%;
+  height: 100%;
+  margin:1vw auto;
+  background-color: #e6e9eb30;
+  display: grid;
+  align-content: center;
+  border-radius:10px;
+}
+
+.form-container>form{
+  padding:1vw;
+  display:flex;
+  flex-direction:column;
+  
+}
+
+.form-rows{
+  display:flex;
+  margin:0.75vw;
+  justify-content: space-between;
+}
+.form-rows>input{
+  flex-grow:0.9;
+  background-color: black;
+  background: 1px 1px inset #59738a;
+  border:none;
+  border-bottom:1px solid  #8c8181;
+  border-left:1px solid  #8c8181;
+}
+#submit-btn{
+  width: fit-content;
+  background-color: transparent;
+  border:1px solid black;
+  box-shadow: 1px 1px black;
+  margin :1vw;
+
+}
+
+
+
+
+
+

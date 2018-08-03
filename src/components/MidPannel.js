@@ -7,7 +7,7 @@ const MidPannel = (props)=>{
 	
 	const tmpList = props.data.map((item,i)=>
 				<img src={
-					require(`./images/thumbnails/${item.src}`) !== undefined
+					require(`./images/thumbnails/${toCapitalize(item.src)}`) !== undefined
 					? require(`./images/thumbnails/${toCapitalize(item.src)}`)
 					: require('./images/thumbnails/Rojak.jpg.webp')
 				} 

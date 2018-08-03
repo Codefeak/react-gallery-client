@@ -36,7 +36,6 @@ class AddNew extends Component {
             data:this.state
         }).then(res=>{
             if(!res.data.error){
-
             }
             this.props.history.push('/login/profile')
         });

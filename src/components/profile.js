@@ -37,6 +37,7 @@ class Profile extends Component{
                 url:'https://react-gallery-server.herokuapp.com/login/delete',
                 data: this.state.individualData
             }).then(res=>{
+                console.log(res);
                 this.props.history.push('/login/profile', {some:res.data})
             });
         }

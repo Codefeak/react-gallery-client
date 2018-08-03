@@ -8,7 +8,7 @@ class AddNew extends Component {
         lastName: "",
         title: "",
         nationality: "",
-        skills: [],
+        skills: "",
         whySofterDeveloper: "",
         longTermVision: "",
         motivatesMe: "",
@@ -18,17 +18,15 @@ class AddNew extends Component {
 
     handleChange = (e) => {
         e.preventDefault();
-        let tmp = [...this.state.skills];
-        if( e.target.name === 'skills'){
-            tmp.push(e.target.value);
-        }
-        else {
-            this.setState({[e.target.name]:e.target.value});
-        }
+        this.setState({[e.target.name]:e.target.value});
+        
+        console.log(this.state.skills);
     };
 
     handleSubmit=(e)=>{
         e.preventDefault();
+        const tmpSkills = Array.from(this.state.skills);
+        this.setState({skills:tmpSkills});
         const tmp = [this.state];
         axios({
             method:'post',

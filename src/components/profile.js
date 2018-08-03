@@ -26,7 +26,6 @@ class Profile extends Component{
     }
 
     handleClick=(e)=>{
-        console.log(e.target);
         if(e.target.id==="back" ){
             this.setState({individualData:this.state.students, classShow:'show'});
             e.target.className=this.state.classShow;
@@ -36,7 +35,7 @@ class Profile extends Component{
             axios({
                 method:'delete',
                 url:'https://react-gallery-server.herokuapp.com/login/delete',
-                data: e.target.id
+                data: this.state.individualData
             }).then(res=>{
                 this.props.history.push('/login/profile', {some:res.data})
             });

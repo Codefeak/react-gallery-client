@@ -43,8 +43,15 @@ class Profile extends Component{
             });
         }
         else {
-            const tmp = this.filter(this.state.students, e.target.id);
-            this.setState({individualData:tmp, classShow:'hide'});
+            axios({
+                method:'post',
+                url:'https://react-gallery-server.herokuapp.com/login/profile/:id',
+                data:e.target.id
+            }).then(res=>{
+                this.setState({individualData:res, classShow:'hide'});
+            })
+            // const tmp = this.filter(this.state.students, e.target.id);
+            
         }
     }
 

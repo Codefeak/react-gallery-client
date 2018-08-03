@@ -9,7 +9,7 @@ const MidPannel = (props)=>{
 				<img src={
 					require(`./images/thumbnails/${toCapitalize(item.src)}`) !== undefined
 					? require(`./images/thumbnails/${toCapitalize(item.src)}`)
-					: require('./images/thumbnails/Rojak.jpg.wepg')
+					: require('./images/thumbnails/Rojak.jpg.webp')
 				} 
 					alt={item.alt} key={`${item.firstName}${i}`}
 					onClick={props.click} />

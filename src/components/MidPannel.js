@@ -6,7 +6,10 @@ const MidPannel = (props)=>{
 	}
 	
 	const tmpList = props.data.map((item,i)=>
-				<img src={require(`./images/thumbnails/${toCapitalize(item.src)}`)} 
+				<img src={
+					require(`./images/thumbnails/${toCapitalize(item.src)}`) !== undefined &&
+					require(`./images/thumbnails/${toCapitalize(item.src)}`)
+				} 
 					alt={item.alt} key={`${item.firstName}${i}`}
 					onClick={props.click} />
 			);

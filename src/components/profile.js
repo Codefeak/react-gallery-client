@@ -37,8 +37,9 @@ class Profile extends Component{
                 url:'https://react-gallery-server.herokuapp.com/login/delete',
                 data: this.state.individualData
             }).then(res=>{
-                console.log(res);
-                this.props.history.push('/login/profile', {some:res.data})
+                console.log(res.data);
+                this.setState({individualData:res.data, classShow:'show'});
+                // this.props.history.replace('/login/profile', {some:res.data})
             });
         }
         else {

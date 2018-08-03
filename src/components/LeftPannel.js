@@ -3,7 +3,6 @@ import logo from './images/integrify-logo-neg.svg';
 
 
 const LeftPannel=(props)=>{
-
 		return(
 			<div>
 				<div className = {`integrify ${props.classShow}`}>

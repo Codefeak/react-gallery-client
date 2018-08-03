@@ -43,14 +43,17 @@ class Profile extends Component{
             });
         }
         else {
-            axios({
-                method:'post',
-                url:'https://react-gallery-server.herokuapp.com/login/profile/:id',
-                data:e.target.id
-            }).then(res=>{
-                this.setState({individualData:res, classShow:'hide'});
-            })
-            // const tmp = this.filter(this.state.students, e.target.id);
+            // console.log(e.target.id)
+            // axios({
+            //     method:'post',
+            //     url:'https://react-gallery-server.herokuapp.com/login/profile/:id',
+            //     data:[e.target.id]
+            // }).then(res=>{
+            //     tmp=res.data;
+            // })
+            const tmp = this.filter(this.state.students, e.target.id);
+            this.setState({individualData:tmp, classShow:'hide'});
+            console.log(this.props)
             
         }
     }

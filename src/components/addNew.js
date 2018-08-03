@@ -55,6 +55,10 @@ class AddNew extends Component {
                         <input onChange={this.handleChange} type="text" name="lastName" />
                     </label>
                     <label className="form-rows">
+                        <span> Alt:</span>
+                        <input onChange={this.handleChange} type="text" name="alt" />
+                    </label>
+                    <label className="form-rows">
                         <span> Title: </span>
                         <input onChange={this.handleChange} type="text" name="title" />
                     </label>

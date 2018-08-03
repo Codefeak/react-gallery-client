@@ -1,6 +1,7 @@
 import React from 'react';
 
 const MidPannel = (props)=>{
+	
 	function toCapitalize(string){
   		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
@@ -11,7 +12,8 @@ const MidPannel = (props)=>{
 					? require(`./images/thumbnails/${toCapitalize(item.src)}`)
 					: require('./images/thumbnails/Rojak.jpg.webp')
 				} 
-					alt={item.alt} key={`${item.firstName}${i}`}
+					alt={item.alt}
+					id ={item._id} key={`${item.firstName}${i}`}
 					onClick={props.click} />
 			);
 	return(

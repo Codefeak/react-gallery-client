@@ -20,16 +20,17 @@ class Profile extends Component{
     
     filter=(data, x)=>{
         return data.filter(item=>{
-            return ((item.alt ===x)&& item)
+            return ((item._id === x)&& item)
         })
     }
 
     handleClick=(e)=>{
+        console.log(e.target);
         if(e.target.id==="back" ){
             this.setState({individualData:this.state.students, classShow:'show'});
             e.target.className=this.state.classShow;
         }else{
-            const tmp = this.filter(this.state.students, e.target.alt);
+            const tmp = this.filter(this.state.students, e.target.id);
             this.setState({individualData:tmp, classShow:'hide'});
         }
     }

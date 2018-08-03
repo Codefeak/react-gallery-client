@@ -11,7 +11,11 @@ const LeftPannel=(props)=>{
 					<p>Welcome to Integrify Gallery</p>
 				</div>
 				<div className = {`indiv-image ${props.classShow==="show"?"hide":"show"}`}>
-					<img src={props.data[0] && require(`./images/${toCapitalize(props.data[0].src)}`)} 
+					<img src={props.data[0]&&
+						props.data[0].src !== undefined 
+						? require(`./images/${toCapitalize(props.data[0].src)}`)
+						: require('./images/thumbnails/Rojak.jpg.webp')
+					} 
 						alt={props.data[0] && props.data[0].alt} 
 					 />
 					<h1>{props.data[0] && `${props.data[0].firstName} ${props.data[0].lastName}`}</h1>

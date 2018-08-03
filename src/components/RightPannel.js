@@ -13,6 +13,7 @@ class RightPannel extends Component{
 
 		render(){
 		return(
+				
 			<div>
 				<div className={`info ${this.props.classShow}`}>
 					<div className="right-headers">
@@ -21,6 +22,8 @@ class RightPannel extends Component{
 						<h1 id="add-new"><Link to="/login/addNew">AddNew</Link></h1>
 					</div>
 					<div className="img-logos">
+			
+
 						<img src={digia} alt="Digia Logo"/>
 						<img src={druid} alt="Druid Logo"/>
 						<img src={fraktio} alt="Fraktio Logo"/>
@@ -33,7 +36,7 @@ class RightPannel extends Component{
 
 				<div className={`indiv-information ${this.props.classShow==="show"?"hide":"show"}`}>
 					<input className={`indiv-information ${this.props.classShow==="show"?"hide":"show"}`} type="button" value="X" id="back" onClick={this.props.click}/> 
-					<div className = "info-div ">	
+					<div className = "info-div ">
 						<h2 className="key-name">Name: </h2><p>{this.props.data[0] && `${this.props.data[0].firstName} ${this.props.data[0].lastName}`}</p>
 						<h2 className="key-name">Title: </h2><p>{this.props.data[0] && `${this.props.data[0].title}`}</p>
 						<h2 className="key-name">Nationality: </h2><p>{this.props.data[0] && `${this.props.data[0].nationality}`}</p>

@@ -1,6 +1,5 @@
 import React,{ Component } from 'react';
-import axios from 'axios';
-import { withRouter, Redirect, Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import digia from './images/digia-logo.svg';
 import druid from './images/druid-logo.svg';
 import fraktio from './images/fraktio-logo-white.svg';

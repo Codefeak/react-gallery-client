@@ -29,6 +29,19 @@ body{
   justify-content: center;
 }
 
+#delete-btn{
+  width:fit-content;
+  text-decoration:none;
+  margin:2vw;
+  border: 1px solid red;
+  padding:0.5vw 3vw;
+  cursor: pointer;
+}
+#delete-btn:hover{
+  border: 1px solid red;
+  background:#ff000085;
+}
+
 .right-container{
   height:inherit;
   grid-column:2;

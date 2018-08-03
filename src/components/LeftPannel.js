@@ -20,6 +20,7 @@ const LeftPannel=(props)=>{
 					 />
 					<h1>{props.data[0] && `${props.data[0].firstName} ${props.data[0].lastName}`}</h1>
 				</div>
+				<p id = "delete-btn" className = {`${props.classShow==="show"?"hide":"show"}`} onClick={props.click}>Delete</p>
 			</div>
 		
 	)

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Registration from './components/registration';
-import Profile from './components/profile';
 import './App.css';
 
 class App extends Component {

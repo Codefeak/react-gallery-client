@@ -33,7 +33,7 @@ class AddNew extends Component {
         axios({
             method:'post',
             url:'https://react-gallery-server.herokuapp.com/login/addNew',
-            data:this.state
+            data:tmp
         }).then(res=>{
             if(!res.data.error){
             }

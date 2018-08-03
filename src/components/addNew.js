@@ -87,7 +87,7 @@ class AddNew extends Component {
                         <input onChange={this.handleChange} type="text" name="joinedOn" />
                     </label>
                     <div>
-                        <input id="submit-btn" type="Submit" value="Submit" />
+                        <input id="submit-btn" type="Submit" value="Submit" readOnly />
                         <button id="submit-btn" ><Link to="/login/profile">Back</Link> </button>
                     </div>
                 </form>

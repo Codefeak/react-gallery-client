@@ -2,14 +2,12 @@ import React from 'react';
 
 const MidPannel = (props)=>{
 	function toCapitalize(string){
+		if(string!==undefined)
   		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 	
 	const tmpList = props.data.map((item,i)=>
-				<img src={
-					require(`./images/thumbnails/${toCapitalize(item.src)}`) !== undefined &&
-					require(`./images/thumbnails/${toCapitalize(item.src)}`)
-				} 
+				<img src={require(`./images/thumbnails/${toCapitalize(item.src)}`)} 
 					alt={item.alt} key={`${item.firstName}${i}`}
 					onClick={props.click} />
 			);

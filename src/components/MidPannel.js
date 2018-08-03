@@ -2,7 +2,6 @@ import React from 'react';
 
 const MidPannel = (props)=>{
 	function toCapitalize(string){
-		if(string!==undefined)
   		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 	

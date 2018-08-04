@@ -14,35 +14,40 @@ class AddNew extends Component {
         motivatesMe: "",
         favoriteQuote: "",
         joinedOn: "",
+        src:"",
     }
 
     handleChange = (e) => {
         e.preventDefault();
+        if(e.target.name === 'src'){
+            this.setState({src:this.state.firstName});
+            console.log(this.state)
+        }
         this.setState({[e.target.name]:e.target.value});
         
         console.log(this.state.skills);
     };
 
-    handleSubmit=(e)=>{
-        e.preventDefault();
-        const tmpSkills = Array.from(this.state.skills);
-        this.setState({skills:tmpSkills});
-        const tmp = [this.state];
-        axios({
-            method:'post',
-            url:'https://react-gallery-server.herokuapp.com/login/addNew',
-            data:tmp
-        }).then(res=>{
-            if(!res.data.error){
-            }
-            this.props.history.push('/login/profile',{some:res.data})
-        });
-    }
+    // handleSubmit=(e)=>{
+    //     e.preventDefault();
+    //     const tmpSkills = Array.from(this.state.skills);
+    //     this.setState({skills:tmpSkills});
+    //     const tmp = [this.state];
+    //     axios({
+    //         method:'post',
+    //         url:'https://react-gallery-server.herokuapp.com/login/addNew',
+    //         data:tmp
+    //     }).then(res=>{
+    //         if(!res.data.error){
+    //         }
+    //         this.props.history.push('/login/profile',{some:res.data})
+    //     });
+    // }
 
     render() {
         return (
             <div className="form-container ">
-                <form action="" method="post" onSubmit={this.handleSubmit}>
+                <form action="https://react-gallery-server.herokuapp.com/login/addNew" method="post"  encType="multipart/form-data">
                     <p>Please Fill Up the Following informations:</p>
                     <label className="form-rows">
                         <span> FirstName:</span>
@@ -87,6 +92,10 @@ class AddNew extends Component {
                     <label className="form-rows">
                         <span> Joined Date: </span>
                         <input onChange={this.handleChange} type="text" name="joinedOn" />
+                    </label>
+                    <label className="form-rows">
+                        <span> Image: </span>
+                        <input onChange={this.handleChange} type="file" name="src" />
                     </label>
                     <div>
                         <input id="submit-btn" type="Submit" value="Submit" readOnly />

@@ -1,11 +1,5 @@
 import React,{ Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import digia from './images/digia-logo.svg';
-import druid from './images/druid-logo.svg';
-import fraktio from './images/fraktio-logo-white.svg';
-import wunder from './images/wunder-logo.png';
-import omni from './images/omni-logo.png';
-import helsinki from './images/Helsinki-logo-2017.png';
 
 class RightPannel extends Component{
 
@@ -23,12 +17,12 @@ class RightPannel extends Component{
 					<div className="img-logos">
 			
 
-						<img src={digia} alt="Digia Logo"/>
-						<img src={druid} alt="Druid Logo"/>
-						<img src={fraktio} alt="Fraktio Logo"/>
-						<img src={wunder} alt="Wunder Logo"/>
-						<img src={omni} alt="Omni ogo"/>
-						<img src={helsinki} alt="Helsinki Logo"/>
+						<img src='http://localhost:5000/login/images/digia-logo.svg' alt="Digia Logo"/>
+						<img src='http://localhost:5000/login/images/druid-logo.svg' alt="Druid Logo"/>
+						<img src='http://localhost:5000/login/images/fraktio-logo-white.svg' alt="Fraktio Logo"/>
+						<img src='http://localhost:5000/login/images/wunder-logo.png' alt="Wunder Logo"/>
+						<img src='http://localhost:5000/login/images/omni-logo.png' alt="Omni ogo"/>
+						<img src='http://localhost:5000/login/images/Helsinki-logo-2017.png' alt="Helsinki Logo"/>
 					</div>
 				</div>
 				

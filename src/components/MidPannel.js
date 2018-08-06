@@ -1,11 +1,17 @@
 import React from 'react';
 
 const MidPannel = (props) => {
+	const Capitalize=(string)=>{
+		if(string!==undefined){
+			return string.charAt(0).toUpperCase() + string.slice(1);
+		}
+	}
 
 	const tmpList = props.data.map((item, i) =>
 		<img src={
+			
 			item.src !== undefined
-				? `https://react-gallery-server.herokuapp.com/login/images/thumbnails/${item.src}`
+				? `https://react-gallery-server.herokuapp.com/login/images/thumbnails/${Capitalize(item.src)}`
 				: 'https://react-gallery-server.herokuapp.com/login/images/thumbnails/Rojak.jpg.webp'
 		}
 			alt={item.alt}

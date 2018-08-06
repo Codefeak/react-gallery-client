@@ -17,12 +17,12 @@ class RightPannel extends Component{
 					<div className="img-logos">
 			
 
-						<img src='http://localhost:5000/login/images/digia-logo.svg' alt="Digia Logo"/>
-						<img src='http://localhost:5000/login/images/druid-logo.svg' alt="Druid Logo"/>
-						<img src='http://localhost:5000/login/images/fraktio-logo-white.svg' alt="Fraktio Logo"/>
-						<img src='http://localhost:5000/login/images/wunder-logo.png' alt="Wunder Logo"/>
-						<img src='http://localhost:5000/login/images/omni-logo.png' alt="Omni ogo"/>
-						<img src='http://localhost:5000/login/images/Helsinki-logo-2017.png' alt="Helsinki Logo"/>
+						<img src='https://react-gallery-server.herokuapp.com/login/images/digia-logo.svg' alt="Digia Logo"/>
+						<img src='https://react-gallery-server.herokuapp.com/login/images/druid-logo.svg' alt="Druid Logo"/>
+						<img src='https://react-gallery-server.herokuapp.com/login/images/fraktio-logo-white.svg' alt="Fraktio Logo"/>
+						<img src='https://react-gallery-server.herokuapp.com/login/images/wunder-logo.png' alt="Wunder Logo"/>
+						<img src='https://react-gallery-server.herokuapp.com/login/images/omni-logo.png' alt="Omni ogo"/>
+						<img src='https://react-gallery-server.herokuapp.com/login/images/Helsinki-logo-2017.png' alt="Helsinki Logo"/>
 					</div>
 				</div>
 				

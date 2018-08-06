@@ -6,10 +6,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 
-class Profile extends Component{
-    constructor(props){
-        super(props)
-    }
+class IndividualView extends Component{
     state={
         students:[],
         individualData:"",
@@ -57,6 +54,7 @@ class Profile extends Component{
     }
 
     render(){
+        console.log(this.props)
         return(
             <div>
                 <div className="main-container">
@@ -78,4 +76,4 @@ class Profile extends Component{
     }
 }
 
-export default withRouter(Profile);
+export default withRouter(IndividualView);

@@ -18,14 +18,26 @@ class AddNew extends Component {
     }
 
     handleChange = (e) => {
+        console.log(e.target.value)
         e.preventDefault();
         if(e.target.name === 'src'){
             this.setState({src:this.state.firstName});
             console.log(this.state)
         }
         this.setState({[e.target.name]:e.target.value});
-        
-        console.log(this.state.skills);
+        console.log(this.state.src);
+    };
+
+    handleFileUpload=(e)=>{
+        e.preventDefault();
+        this.setState({src:`${this.state.firstName}.jpg`});
+        console.dir(e.target.files[0])
+        const data = new FormData();
+        data.append('file', e.target.files[0], `${this.state.firstName}.jpg`);
+        axios.post('https://react-gallery-server.herokuapp.com/login/addNew/upload', data)
+        .then(res => {
+        console.log(res); // do something with the response
+    });
     };
 
     handleSubmit=(e)=>{
@@ -47,7 +59,7 @@ class AddNew extends Component {
     render() {
         return (
             <div className="form-container ">
-                <form action="/login/addNew" method="post" onSubmit={this.handleSubmit} enctype="multipart/form-data">
+                <form action="/login/addNew" method="post" onSubmit={this.handleSubmit} encType="multipart/form-data">
                     <p>Please Fill Up the Following informations:</p>
                     <label className="form-rows">
                         <span> FirstName:</span>
@@ -83,11 +95,16 @@ class AddNew extends Component {
                     </label>
                     <label className="form-rows">
                         <span> Motivation:</span>
-                        <input onChange={this.handleChange} type="text" name="motivatesMe" />
+                        <input onChange={this.handleChange} type="text" name="motivanesMe" />
                     </label>
                     <label className="form-rows">
                         <span> Favorite Quote:</span>
                         <input onChange={this.handleChange} type="text" name="favoriteQuote" />
+                    </label>
+                    <label className="form-rows">
+                        <span> Image: </span>
+                        <input onChange={this.handleFileUpload} type="file" />
+                        {/* <button onClick = {this.handleFileUpload}>Upload Image</button> */}
                     </label>
                     <label className="form-rows">
                         <span> Joined Date: </span>

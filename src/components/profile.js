@@ -12,8 +12,7 @@ class Profile extends Component{
     }
 
     componentDidMount=()=>{
-        // fetch('https://react-gallery-server.herokuapp.com/api')
-        fetch('http://localhost:5000/api')
+        fetch('https://react-gallery-server.herokuapp.com/api')
         .then(res=>res.json())
         .then(api=>{
             this.setState({students:api});

@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import LeftPannel from './LeftPannel';
 import MidPannel from './MidPannel';
 import RightPannel from './RightPannel';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 
 class Profile extends Component{
-    constructor(props){
-        super(props)
-    }
+    
     state={
         students:[],
         individualData:"",
@@ -45,15 +43,13 @@ class Profile extends Component{
             }).then(res=>{
                 console.log(res.data);
                 this.setState({individualData:res.data, classShow:'show'});
-                this.props.history.push('/login/profile')
+                this.props.history.push('/login/profile', {some:res.data});
             });
-        }
-        else {
+        }else{
             const tmp = this.filter(this.state.students, e.target.id);
             this.setState({individualData:tmp, classShow:'hide'});
             this.props.history.push(`/login/${e.target.id}`, {some:this.state.individualData})
-            
-        }
+        }        
     }
 
     render(){
@@ -79,3 +75,4 @@ class Profile extends Component{
 }
 
 export default withRouter(Profile);
+

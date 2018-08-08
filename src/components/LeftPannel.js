@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const LeftPannel=(props)=>{
@@ -26,3 +27,9 @@ const LeftPannel=(props)=>{
 
 export default LeftPannel;
 
+LeftPannel.propTypes={
+	classShow: PropTypes.string,
+	firstName: PropTypes.string,
+	lastName: PropTypes.string,
+	click: PropTypes.func,
+}

@@ -193,7 +193,15 @@ body{
   display:flex;
   margin:0.75vw;
   justify-content: space-between;
+  position: relative;
 }
+
+.err-message{
+  position: absolute;
+  right:0;
+  color:red;
+}
+
 .form-rows>input{
   flex-grow:0.9;
   background-color: black;
@@ -213,6 +221,10 @@ body{
 #submit-btn>a{
   text-decoration: none;
 }
+
+/* #submit-btn>a:hover{
+  background-color: orchid;
+} */
 
 
 

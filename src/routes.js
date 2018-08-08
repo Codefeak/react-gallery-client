@@ -2,7 +2,6 @@ import React,{ Component } from 'react';
 import App from './App';
 import Profile from './components/profile';
 import AddNew from './components/addNew';
-import IndividualView from './components/individualView';
 import { Switch, Route } from 'react-router';
 
 class Routes extends Component{

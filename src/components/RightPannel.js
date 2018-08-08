@@ -12,18 +12,18 @@ class RightPannel extends Component{
 				<div className={`info ${this.props.classShow}`}>
 					<div className="right-headers">
 						<h1 id="partners">Partners</h1>
-						<h1 id="api"><a href="https://react-gallery-server.herokuapp.com/api">API</a></h1>
+						<h1 id="api"><a href="/api">API</a></h1>
 						<h1 id="add-new"><Link to="/login/addNew">AddNew</Link></h1>
 					</div>
 					<div className="img-logos">
 			
 
-						<img src='https://react-gallery-server.herokuapp.com/login/images/digia-logo.svg' alt="Digia Logo"/>
-						<img src='https://react-gallery-server.herokuapp.com/login/images/druid-logo.svg' alt="Druid Logo"/>
-						<img src='https://react-gallery-server.herokuapp.com/login/images/fraktio-logo-white.svg' alt="Fraktio Logo"/>
-						<img src='https://react-gallery-server.herokuapp.com/login/images/wunder-logo.png' alt="Wunder Logo"/>
-						<img src='https://react-gallery-server.herokuapp.com/login/images/omni-logo.png' alt="Omni ogo"/>
-						<img src='https://react-gallery-server.herokuapp.com/login/images/Helsinki-logo-2017.png' alt="Helsinki Logo"/>
+						<img src='/login/images/digia-logo.svg' alt="Digia Logo"/>
+						<img src='/login/images/druid-logo.svg' alt="Druid Logo"/>
+						<img src='/login/images/fraktio-logo-white.svg' alt="Fraktio Logo"/>
+						<img src='/login/images/wunder-logo.png' alt="Wunder Logo"/>
+						<img src='/login/images/omni-logo.png' alt="Omni ogo"/>
+						<img src='/login/images/Helsinki-logo-2017.png' alt="Helsinki Logo"/>
 					</div>
 				</div>
 				
@@ -56,7 +56,6 @@ RightPannel.propTypes = {
 	classShow:PropTypes.string.isRequired,
 	firstName:PropTypes.string.isRequired,
 	lastName:PropTypes.string.isRequired,
-	skills:PropTypes.array.isRequired,
 	whySofterDeveloper:PropTypes.string.isRequired,
 	longTermVision:PropTypes.string.isRequired,
 	motivatesMe:PropTypes.string.isRequired,

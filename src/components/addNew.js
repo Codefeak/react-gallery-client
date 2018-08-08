@@ -58,7 +58,7 @@ class AddNew extends Component {
         console.dir(e.target.files[0])
         const data = new FormData();
         data.append('file', e.target.files[0], `${this.state.firstName}.jpg`);
-        axios.post('https://react-gallery-server.herokuapp.com/login/addNew/upload', data)
+        axios.post('/login/addNew/upload', data)
         .then(res => {
         console.log(res); // do something with the response
     });
@@ -71,7 +71,7 @@ class AddNew extends Component {
         const tmp = [this.state];
         axios({
             method:'post',
-            url:'https://react-gallery-server.herokuapp.com/login/addNew',
+            url:'/login/addNew',
             data:tmp
         }).then(res=>{
             if(!res.data.error){
@@ -101,9 +101,6 @@ class AddNew extends Component {
             :   validator.isAlpha(nationality)
                 ? ''
                 : 'nationality can only have alphabetic characters!!!',
-            skills: validator.isEmpty(skills)
-                ? 'Skills cannot be empty!!!'
-                : '',
             whySofterDeveloper: validator.isEmpty(whySofterDeveloper)
                 ? 'Please fill up this section!!'
                 : '',
@@ -116,15 +113,13 @@ class AddNew extends Component {
             motivatesMe: validator.isAlpha(motivatesMe)
                 ? ''
                 : 'motivatesMe can only have alphabetic characters!!!',
-            joinedOn: validator.isRFC3339(joinedOn)
-                ? ''
-                : 'Please ensure it is in date format',
         }
         return errors;
     };
 
     isSubmitDisabled = errors =>{
         return Object.values(errors).some(errMsg=>{
+            console.log('err', errMsg);
             return errMsg;
         })
     }
@@ -180,7 +175,7 @@ class AddNew extends Component {
                     </label>
                     <label className={`${errors.firstName && isTouched.firstName ? 'invalid' :" "} form-rows`}>
                         <span> Motivation:</span>
-                        <input onBlur ={this.handleFocus} onChange={this.handleChange} type="text" name="motivanesMe" />
+                        <input onBlur ={this.handleFocus} onChange={this.handleChange} type="text" name="motivatesMe" />
                         {isTouched.motivatesMe && errors.motivatesMe && (<span className="err-message">{errors.motivatesMe}</span> )}
                     </label>
                     <label className={`${errors.firstName && isTouched.firstName ? 'invalid' :" "} form-rows`}>
@@ -191,7 +186,6 @@ class AddNew extends Component {
                     <label className={`${errors.firstName && isTouched.firstName ? 'invalid' :" "} form-rows`}>
                         <span> Image: </span>
                         <input onBlur ={this.handleFocus} onChange={this.handleFileUpload} type="file" />
-                        {/* <button onClick = {this.handleFileUpload}>Upload Image</button> */}
                     </label>
                     <label className={`${errors.firstName && isTouched.firstName ? 'invalid' :" "} form-rows`}>
                         <span> Joined Date: </span>

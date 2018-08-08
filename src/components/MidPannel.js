@@ -11,8 +11,8 @@ const MidPannel = (props) => {
 		<img src={
 			
 			item.src !== undefined
-				? `https://react-gallery-server.herokuapp.com/login/images/thumbnails/${Capitalize(item.src)}`
-				: 'https://react-gallery-server.herokuapp.com/login/images/thumbnails/Rojak.jpg.webp'
+				? `/login/images/thumbnails/${Capitalize(item.src)}`
+				: '/login/images/thumbnails/Rojak.jpg.webp'
 		}
 			alt={item.alt}
 			id={item._id} key={`${item.firstName}${i}`}

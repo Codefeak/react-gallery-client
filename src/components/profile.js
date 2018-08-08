@@ -21,7 +21,6 @@ class Profile extends Component{
     }
 
     componentDidMount=()=>{
-        console.log('did mount')
         fetch('https://react-gallery-server.herokuapp.com/api')
         .then(res=>res.json())
         .then(api=>{
@@ -57,7 +56,7 @@ class Profile extends Component{
         }else{
             const tmp = this.filter(this.state.students, e.target.id);
             this.setState({individualData:tmp, classShow:'hide'});
-            this.props.history.push(`/login/${e.target.id}`, {some:this.state.individualData})
+            this.props.history.push(`/login/${e.target.id}`)
         }        
     }
 

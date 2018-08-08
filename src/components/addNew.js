@@ -196,7 +196,6 @@ class AddNew extends Component {
                     <label className={`${errors.firstName && isTouched.firstName ? 'invalid' :" "} form-rows`}>
                         <span> Joined Date: </span>
                         <input onBlur ={this.handleFocus} onChange={this.handleChange} type="date" name="joinedOn" />
-                        {isTouched.joinedOn && errors.joinedOn && (<span className="err-message">{errors.joinedOn}</span> )}
                     </label>
                     <div>
                         <input id="submit-btn" type="Submit" value="Submit" readOnly disabled = {this.isSubmitDisabled(errors)} />

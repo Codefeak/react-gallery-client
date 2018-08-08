@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class RightPannel extends Component{
 
@@ -49,3 +50,17 @@ class RightPannel extends Component{
 }
 
 export default withRouter(RightPannel);
+
+RightPannel.propTypes = {
+	onClick:PropTypes.func.isRequired,
+	classShow:PropTypes.string.isRequired,
+	firstName:PropTypes.string.isRequired,
+	lastName:PropTypes.string.isRequired,
+	skills:PropTypes.array.isRequired,
+	whySofterDeveloper:PropTypes.string.isRequired,
+	longTermVision:PropTypes.string.isRequired,
+	motivatesMe:PropTypes.string.isRequired,
+	favoriteQuote:PropTypes.string.isRequired,
+
+
+}

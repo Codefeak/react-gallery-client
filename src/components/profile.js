@@ -21,12 +21,21 @@ class Profile extends Component{
     }
 
     componentDidMount=()=>{
+        console.log('did mount')
         fetch('https://react-gallery-server.herokuapp.com/api')
         .then(res=>res.json())
         .then(api=>{
             this.setState({students:api});
         })
     };
+
+    componentDidUpdate=()=>{
+        fetch('https://react-gallery-server.herokuapp.com/api')
+        .then(res=>res.json())
+        .then(api=>{
+            this.setState({students:api});
+        })
+    }
 
     handleClick=(e)=>{
         if(e.target.id==="back" ){
